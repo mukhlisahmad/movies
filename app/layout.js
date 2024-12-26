@@ -14,6 +14,7 @@ export default async function RootLayout({ children }) {
       <head>
         <title>MY movie</title>
         <link rel="icon" href="/images/movie-icon-15142.png" />
+        <meta name="google-adsense-account" content="ca-pub-8829449002369751"></meta>
        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8829449002369751"
      crossorigin="anonymous"></script>
 
