@@ -25,6 +25,8 @@ export const getLanguageCode = (languageCode) => {
   switch (languageCode) {
     case "en":
       return "ENGLISH";
+    case "id":
+      return "INDONESIA";
     case "es":
       return "SPANISH";
     case "fr":

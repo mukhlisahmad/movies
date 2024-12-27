@@ -77,17 +77,17 @@ const MainVideoPlayer = ({ videoInfo, movieInfo }) => {
         posterLoad='eager'
         streamType='on-demand'
         crossOrigin
-        playsInline
-        src={`https://m3-u8-proxy-iota.vercel.app/m3u8-proxy?url=${encodeURIComponent(videoInfo?.server)}&headers=${encodeURIComponent(`{"referer": "${videoInfo?.referer}"}`)}`}
+playsInline
+src={`https://m3-u8-proxy-iota.vercel.app/m3u8-proxy?url=${encodeURIComponent(videoInfo?.server)}&headers=${encodeURIComponent(`{"referer": "${videoInfo?.referer}"}`)}`}
         onTimeUpdate={throttledSaveProgress}
-        onDurationChange={e => setDuration(e)}
-      >
+        onDurationChange={e => setDuration(e)} >        
+        {/* console.log(`https://m3-u8-proxy-iota.vercel.app/m3u8-proxy?url=${encodeURIComponent(videoInfo?.server)}&headers=${encodeURIComponent(`{"referer": "${videoInfo?.referer}"}`)}`); */}
         <MediaProvider />
         <DefaultVideoLayout icons={defaultLayoutIcons} />
 
         {videoInfo?.subtitle.map(item => <Track
           key={item?.lang}
-          src="https://cca.megafiles.store/bc/29/bc29f4ff9607c5e3a948dfe76a38fb09/eng-2.vtt"
+          src="https://cca.megafiles.store/bc/29/bc29f4ff9607c5e3a948dfe76a38fb09/idn-2.vtt"
           kind="subtitles"
           label={item?.lang}
         />)}

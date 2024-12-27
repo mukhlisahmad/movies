@@ -5,6 +5,7 @@ import TopRated from "@/content/Home/Season";
 import Trending from "@/content/Home/Trending";
 import WatchHistory from "@/content/Home/WatchHistory";
 import { getTrendingMovies, getTopRatedMovies } from "@/lib/MoviesFunctions";
+// import AdBanner from "../components/AdBanner";
 
 const Home = async () => {
   const [trendingdata, top_rateddata] = await Promise.all([
@@ -15,8 +16,8 @@ const Home = async () => {
   return (
     <>
       <Herosection data={trendingdata} />
-
-      <div className="w-full flex flex-col items-center z-10 relative main-responsive">
+     
+      <div className="relative z-10 flex flex-col items-center w-full main-responsive">
         <Trending data={trendingdata} />
         <WatchHistory />
         <Collection />

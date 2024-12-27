@@ -3,9 +3,10 @@ import "./globals.css";
 import Header from "@/partials/header/Header";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+import '../components/Adesense';
+import AdSense from "../components/Adesense";
 const inter = Inter({ subsets: ["latin"] });
-
+import AdBanner from "../components/AdBanner";
 
 export default async function RootLayout({ children }) {
 
@@ -15,14 +16,16 @@ export default async function RootLayout({ children }) {
         <title>MY movie</title>
         <link rel="icon" href="/images/movie-icon-15142.png" />
         <meta name="google-adsense-account" content="ca-pub-8829449002369751"></meta>
-       <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8829449002369751"
-     crossorigin="anonymous"></script>
+        <AdSense pId="8829449002369751"/>
       </head>
       <body className={inter.className}>
         <Header />
         {children}
         <ToastContainer draggable theme="dark" />
-
+        <AdBanner className="w-10 h-6 bg-white"
+          dataAdFormat="auto"
+          dataFullWidthResponsive={true} 
+          dataAdSlot="4284247248"/>
       </body>
     </html>
   );
