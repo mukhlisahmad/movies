@@ -19,12 +19,10 @@ export default async function RootLayout({ children }) {
         <AdSense pId="8829449002369751"/>
       </head>
       <body className={inter.className}>
-        <div className="bg-white">
         <AdBanner
           dataAdFormat="auto"
           dataFullWidthResponsive={true} 
           dataAdSlot="4284247248"/>
-        </div>
         <Header />
         {children}
         <ToastContainer draggable theme="dark" />
