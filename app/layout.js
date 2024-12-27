@@ -20,7 +20,7 @@ export default async function RootLayout({ children }) {
       </head>
       <body className={inter.className}>
         <div className="bg-white">
-        <AdBanner className="w-10 h-6 bg-white"
+        <AdBanner
           dataAdFormat="auto"
           dataFullWidthResponsive={true} 
           dataAdSlot="4284247248"/>
