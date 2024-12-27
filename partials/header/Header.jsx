@@ -17,11 +17,7 @@ const Header = () => {
           <Responsive />
 
           <Link href={"/"} className={`${nightTokyo.className} text-white flex items-center gap-2`}>
-            {/* <Image
-              src="/images/logo.png"
-              alt="movieVerse"
-              width={50}
-              height={50} /> */}
+          
             <span className="text-3xl">MY Movies </span>
           </Link>
 
